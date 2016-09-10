@@ -2,5 +2,7 @@ FROM tomcat:7-jre7
 
 MAINTAINER lindengping lindengping@yihecloud.com
 
-ADD settings.xml /usr/local/tomcat/conf/
-ADD tomcat-users.xml /usr/local/tomcat/conf/
+COPY target/lindengping2-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapp/lindengping2.war 
+EXPOSE 8080
+#…Ë÷√tomcat ◊‘∆Ù∂Ø  
+CMD [ "/usr/local/tomcat/bin/catalina.sh", "run" ]
